@@ -114,7 +114,7 @@ public class StompClient {
         }
         this.serverAddress = new InetSocketAddress( host, port );
         if( useWebSockets ) {
-            this.webSocketAddress = new URI(this.useSSL ? "wss" : "ws" + "://" + host + ":" + port + uri.getPath());
+			this.webSocketAddress = new URI((this.useSSL ? "wss" : "ws") + "://" + host + ":" + port + uri.getPath());
         } else {
             this.webSocketAddress = null;
         }
